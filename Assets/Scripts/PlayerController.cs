@@ -1,0 +1,19 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerController : MonoBehaviour
+{
+    [SerializeField] float _runSpeed;
+    void Start()
+    {
+        
+    }
+
+
+    void Update()
+    {
+        Vector3 newPos = new Vector3(transform.position.x, transform.position.y, transform.position.z + _runSpeed * Time.deltaTime);
+        transform.position = newPos;
+    }
+}

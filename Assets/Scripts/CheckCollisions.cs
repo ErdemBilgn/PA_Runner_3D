@@ -18,6 +18,14 @@ public class CheckCollisions : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Obstacle"))
+        {
+            Debug.Log("Ayvayý yedin.");
+        }
+    }
+
     public void AddCoin()
     {
         score++;

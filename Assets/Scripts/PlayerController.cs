@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] float _runSpeed;
+    public float _runSpeed;
     [SerializeField] float _xSpeed;
     [SerializeField] float _limitX;
 
+    public Animator Animator;
+    public GameObject Player;
+
     void Start()
     {
-        
+        Animator = GetComponentInChildren<Animator>();
+        Animator.SetBool("isRunning", true);
     }
 
 
